@@ -171,6 +171,46 @@ Ana regresa al centro y entrega **5 kg de metal (4 puntos por kg)**.
 * Implementar un sistema de reportes para visualizar los materiales más reciclados.
 * Agregar la opción de modificar la cantidad de puntos asignados a cada tipo de material.
 
+```mermaid
+classDiagram
+    
+        class CentroReciclaje{
+            - list ciudadanos
+            - list materialesReciclados
 
 
+            +void RegistrarCiudadano()
+            +void EliminarCiudadano()
+            +void RegistrarEntrega(MaterialReciclado)
+            +int CalcularPuntos(MaterialReciclado)
+            +int ActualizarPunto()
+            +list MaterialesMasReciclados()
+
+        }
+        
+        class Ciudadano {
+            - string id
+            - string nombre
+            - string telefono
+            - int puntosTotales
+
+            +void ConsultarPuntos()
+            +int CanjearPuntos(puntosTotales)
+
+        }
+
+        class MaterialReciclado{
+            - string tipo
+            - int peso
+            - int puntosXkilo
+
+            +int ConsultarEquivaleciaPuntos()
+            +int ModificarPuntosxKilo()
+
+        }
+
+        CentroReciclaje o--Ciudadano
+        CentroReciclaje o--MaterialReciclado
+
+```
 
