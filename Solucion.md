@@ -35,7 +35,7 @@ Elaborado por: Camilo Salazar
 
 
 # Código en Mermaid del diagrama propuesto: # 
-
+```mermaid
 classDiagram
     
         class GestorReservas{
@@ -79,8 +79,7 @@ classDiagram
     
         GestorReservas o-- Reserva
         Reserva --> Espacio
-
-
+```
 
 
     
